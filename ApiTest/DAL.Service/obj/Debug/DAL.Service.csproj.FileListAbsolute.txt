@@ -1,0 +1,14 @@
+C:\Users\Welber\source\repos\ApiTest\DAL.Service\obj\Debug\DAL.Service.csprojAssemblyReference.cache
+C:\Users\Welber\source\repos\ApiTest\DAL.Service\obj\Debug\DAL.Service.Properties.Resources.resources
+C:\Users\Welber\source\repos\ApiTest\DAL.Service\obj\Debug\DAL.Service.csproj.GenerateResource.cache
+C:\Users\Welber\source\repos\ApiTest\DAL.Service\obj\Debug\DAL.Service.csproj.CoreCompileInputs.cache
+C:\Users\Welber\source\repos\ApiTest\DAL.Service\bin\Debug\DAL.Service.dll.config
+C:\Users\Welber\source\repos\ApiTest\DAL.Service\bin\Debug\DAL.Service.dll
+C:\Users\Welber\source\repos\ApiTest\DAL.Service\bin\Debug\DAL.Service.pdb
+C:\Users\Welber\source\repos\ApiTest\DAL.Service\bin\Debug\EntityFramework.dll
+C:\Users\Welber\source\repos\ApiTest\DAL.Service\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Welber\source\repos\ApiTest\DAL.Service\bin\Debug\EntityFramework.xml
+C:\Users\Welber\source\repos\ApiTest\DAL.Service\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Welber\source\repos\ApiTest\DAL.Service\obj\Debug\DAL.Service.csproj.CopyComplete
+C:\Users\Welber\source\repos\ApiTest\DAL.Service\obj\Debug\DAL.Service.dll
+C:\Users\Welber\source\repos\ApiTest\DAL.Service\obj\Debug\DAL.Service.pdb

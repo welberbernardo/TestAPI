@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="CryptoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Crypto.dbo.Cliente' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Cliente">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Nome_Completo" />
+            <PropertyRef Name="CPF_CNPJ" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nome_Completo" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="CPF_CNPJ" Type="int" Nullable="false" />
+          <Property Name="Ultimo_Negoc" Type="nvarchar(max)" />
+          <Property Name="Ref" Type="nvarchar(max)" />
+          <Property Name="Endereco" Type="nvarchar(max)" />
+          <Property Name="Pais" Type="nvarchar" MaxLength="50" />
+          <Property Name="Nivel_KYC" Type="nvarchar(max)" />
+          <Property Name="Email" Type="nvarchar(max)" />
+          <Property Name="Telefone" Type="int" />
+          <Property Name="RG" Type="int" />
+          <Property Name="Data_Nasc" Type="datetime" />
+          <Property Name="PPE" Type="nvarchar(max)" />
+          <Property Name="Valor_Pret_Nego" Type="nvarchar(max)" />
+          <Property Name="Cod_Parceiro" Type="nvarchar" MaxLength="50" />
+          <Property Name="Lim_Anual_BRL" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Crypto.dbo.Controle' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Controle">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Pedido" />
+            <PropertyRef Name="Id_Cliente" />
+            <PropertyRef Name="Cliente" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Pedido" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Cripto" Type="nvarchar(max)" />
+          <Property Name="Operacao" Type="nvarchar(max)" />
+          <Property Name="Data" Type="datetime" />
+          <Property Name="Valor_RS" Type="money" />
+          <Property Name="Qtde_Cripto" Type="int" />
+          <Property Name="Taxa_RS" Type="money" />
+          <Property Name="Taxa_Cripto" Type="money" />
+          <Property Name="Hash" Type="nvarchar(max)" />
+          <Property Name="Banco" Type="nvarchar(max)" />
+          <Property Name="Id_Cliente" Type="int" Nullable="false" />
+          <Property Name="Cliente" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Ref" Type="nvarchar(max)" />
+          <Property Name="Statu_Operacao" Type="bit" />
+        </EntityType>
+        <EntityContainer Name="CryptoModelStoreContainer">
+          <EntitySet Name="Cliente" EntityType="Self.Cliente" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Cliente].[Id] AS [Id], 
+    [Cliente].[Nome_Completo] AS [Nome_Completo], 
+    [Cliente].[CPF_CNPJ] AS [CPF_CNPJ], 
+    [Cliente].[Ultimo_Negoc] AS [Ultimo_Negoc], 
+    [Cliente].[Ref] AS [Ref], 
+    [Cliente].[Endereco] AS [Endereco], 
+    [Cliente].[Pais] AS [Pais], 
+    [Cliente].[Nivel_KYC] AS [Nivel_KYC], 
+    [Cliente].[Email] AS [Email], 
+    [Cliente].[Telefone] AS [Telefone], 
+    [Cliente].[RG] AS [RG], 
+    [Cliente].[Data_Nasc] AS [Data_Nasc], 
+    [Cliente].[PPE] AS [PPE], 
+    [Cliente].[Valor_Pret_Nego] AS [Valor_Pret_Nego], 
+    [Cliente].[Cod_Parceiro] AS [Cod_Parceiro], 
+    [Cliente].[Lim_Anual_BRL] AS [Lim_Anual_BRL]
+    FROM [dbo].[Cliente] AS [Cliente]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Controle" EntityType="Self.Controle" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Controle].[Id] AS [Id], 
+    [Controle].[Pedido] AS [Pedido], 
+    [Controle].[Cripto] AS [Cripto], 
+    [Controle].[Operacao] AS [Operacao], 
+    [Controle].[Data] AS [Data], 
+    [Controle].[Valor_RS] AS [Valor_RS], 
+    [Controle].[Qtde_Cripto] AS [Qtde_Cripto], 
+    [Controle].[Taxa_RS] AS [Taxa_RS], 
+    [Controle].[Taxa_Cripto] AS [Taxa_Cripto], 
+    [Controle].[Hash] AS [Hash], 
+    [Controle].[Banco] AS [Banco], 
+    [Controle].[Id_Cliente] AS [Id_Cliente], 
+    [Controle].[Cliente] AS [Cliente], 
+    [Controle].[Ref] AS [Ref], 
+    [Controle].[Statu_Operacao] AS [Statu_Operacao]
+    FROM [dbo].[Controle] AS [Controle]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CryptoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Cliente">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Nome_Completo" />
+            <PropertyRef Name="CPF_CNPJ" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome_Completo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CPF_CNPJ" Type="Int32" Nullable="false" />
+          <Property Name="Ultimo_Negoc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Ref" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Endereco" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Pais" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Nivel_KYC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Telefone" Type="Int32" />
+          <Property Name="RG" Type="Int32" />
+          <Property Name="Data_Nasc" Type="DateTime" Precision="3" />
+          <Property Name="PPE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Valor_Pret_Nego" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Cod_Parceiro" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Lim_Anual_BRL" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Controle">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Pedido" />
+            <PropertyRef Name="Id_Cliente" />
+            <PropertyRef Name="Cliente" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Pedido" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Cripto" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Operacao" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Data" Type="DateTime" Precision="3" />
+          <Property Name="Valor_RS" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Qtde_Cripto" Type="Int32" />
+          <Property Name="Taxa_RS" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Taxa_Cripto" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Hash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Banco" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Id_Cliente" Type="Int32" Nullable="false" />
+          <Property Name="Cliente" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Ref" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Statu_Operacao" Type="Boolean" />
+        </EntityType>
+        <EntityContainer Name="CryptoEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Cliente" EntityType="Self.Cliente" />
+          <EntitySet Name="Controle" EntityType="Self.Controle" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CryptoModelStoreContainer" CdmEntityContainer="CryptoEntities">
+          <EntitySetMapping Name="Cliente">
+            <EntityTypeMapping TypeName="CryptoModel.Cliente">
+              <MappingFragment StoreEntitySet="Cliente">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nome_Completo" ColumnName="Nome_Completo" />
+                <ScalarProperty Name="CPF_CNPJ" ColumnName="CPF_CNPJ" />
+                <ScalarProperty Name="Ultimo_Negoc" ColumnName="Ultimo_Negoc" />
+                <ScalarProperty Name="Ref" ColumnName="Ref" />
+                <ScalarProperty Name="Endereco" ColumnName="Endereco" />
+                <ScalarProperty Name="Pais" ColumnName="Pais" />
+                <ScalarProperty Name="Nivel_KYC" ColumnName="Nivel_KYC" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+                <ScalarProperty Name="RG" ColumnName="RG" />
+                <ScalarProperty Name="Data_Nasc" ColumnName="Data_Nasc" />
+                <ScalarProperty Name="PPE" ColumnName="PPE" />
+                <ScalarProperty Name="Valor_Pret_Nego" ColumnName="Valor_Pret_Nego" />
+                <ScalarProperty Name="Cod_Parceiro" ColumnName="Cod_Parceiro" />
+                <ScalarProperty Name="Lim_Anual_BRL" ColumnName="Lim_Anual_BRL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Controle">
+            <EntityTypeMapping TypeName="CryptoModel.Controle">
+              <MappingFragment StoreEntitySet="Controle">
+                <ScalarProperty Name="Statu_Operacao" ColumnName="Statu_Operacao" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Pedido" ColumnName="Pedido" />
+                <ScalarProperty Name="Cripto" ColumnName="Cripto" />
+                <ScalarProperty Name="Operacao" ColumnName="Operacao" />
+                <ScalarProperty Name="Data" ColumnName="Data" />
+                <ScalarProperty Name="Valor_RS" ColumnName="Valor_RS" />
+                <ScalarProperty Name="Qtde_Cripto" ColumnName="Qtde_Cripto" />
+                <ScalarProperty Name="Taxa_RS" ColumnName="Taxa_RS" />
+                <ScalarProperty Name="Taxa_Cripto" ColumnName="Taxa_Cripto" />
+                <ScalarProperty Name="Hash" ColumnName="Hash" />
+                <ScalarProperty Name="Banco" ColumnName="Banco" />
+                <ScalarProperty Name="Id_Cliente" ColumnName="Id_Cliente" />
+                <ScalarProperty Name="Cliente" ColumnName="Cliente" />
+                <ScalarProperty Name="Ref" ColumnName="Ref" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

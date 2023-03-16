@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CryptoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Crypto.dbo.Cliente' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Nome_Completo" />
+      <PropertyRef Name="CPF_CNPJ" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome_Completo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CPF_CNPJ" Type="int" Nullable="false" />
+    <Property Name="Ultimo_Negoc" Type="nvarchar(max)" />
+    <Property Name="Ref" Type="nvarchar(max)" />
+    <Property Name="Endereco" Type="nvarchar(max)" />
+    <Property Name="Pais" Type="nvarchar" MaxLength="50" />
+    <Property Name="Nivel_KYC" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="Telefone" Type="int" />
+    <Property Name="RG" Type="int" />
+    <Property Name="Data_Nasc" Type="datetime" />
+    <Property Name="PPE" Type="nvarchar(max)" />
+    <Property Name="Valor_Pret_Nego" Type="nvarchar(max)" />
+    <Property Name="Cod_Parceiro" Type="nvarchar" MaxLength="50" />
+    <Property Name="Lim_Anual_BRL" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Crypto.dbo.Controle' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Controle">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Pedido" />
+      <PropertyRef Name="Id_Cliente" />
+      <PropertyRef Name="Cliente" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Pedido" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Cripto" Type="nvarchar(max)" />
+    <Property Name="Operacao" Type="nvarchar(max)" />
+    <Property Name="Data" Type="datetime" />
+    <Property Name="Valor_RS" Type="money" />
+    <Property Name="Qtde_Cripto" Type="int" />
+    <Property Name="Taxa_RS" Type="money" />
+    <Property Name="Taxa_Cripto" Type="money" />
+    <Property Name="Hash" Type="nvarchar(max)" />
+    <Property Name="Banco" Type="nvarchar(max)" />
+    <Property Name="Id_Cliente" Type="int" Nullable="false" />
+    <Property Name="Cliente" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Ref" Type="nvarchar(max)" />
+    <Property Name="Statu_Operacao" Type="bit" />
+  </EntityType>
+  <EntityContainer Name="CryptoModelStoreContainer">
+    <EntitySet Name="Cliente" EntityType="Self.Cliente" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Cliente].[Id] AS [Id], 
+    [Cliente].[Nome_Completo] AS [Nome_Completo], 
+    [Cliente].[CPF_CNPJ] AS [CPF_CNPJ], 
+    [Cliente].[Ultimo_Negoc] AS [Ultimo_Negoc], 
+    [Cliente].[Ref] AS [Ref], 
+    [Cliente].[Endereco] AS [Endereco], 
+    [Cliente].[Pais] AS [Pais], 
+    [Cliente].[Nivel_KYC] AS [Nivel_KYC], 
+    [Cliente].[Email] AS [Email], 
+    [Cliente].[Telefone] AS [Telefone], 
+    [Cliente].[RG] AS [RG], 
+    [Cliente].[Data_Nasc] AS [Data_Nasc], 
+    [Cliente].[PPE] AS [PPE], 
+    [Cliente].[Valor_Pret_Nego] AS [Valor_Pret_Nego], 
+    [Cliente].[Cod_Parceiro] AS [Cod_Parceiro], 
+    [Cliente].[Lim_Anual_BRL] AS [Lim_Anual_BRL]
+    FROM [dbo].[Cliente] AS [Cliente]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Controle" EntityType="Self.Controle" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Controle].[Id] AS [Id], 
+    [Controle].[Pedido] AS [Pedido], 
+    [Controle].[Cripto] AS [Cripto], 
+    [Controle].[Operacao] AS [Operacao], 
+    [Controle].[Data] AS [Data], 
+    [Controle].[Valor_RS] AS [Valor_RS], 
+    [Controle].[Qtde_Cripto] AS [Qtde_Cripto], 
+    [Controle].[Taxa_RS] AS [Taxa_RS], 
+    [Controle].[Taxa_Cripto] AS [Taxa_Cripto], 
+    [Controle].[Hash] AS [Hash], 
+    [Controle].[Banco] AS [Banco], 
+    [Controle].[Id_Cliente] AS [Id_Cliente], 
+    [Controle].[Cliente] AS [Cliente], 
+    [Controle].[Ref] AS [Ref], 
+    [Controle].[Statu_Operacao] AS [Statu_Operacao]
+    FROM [dbo].[Controle] AS [Controle]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

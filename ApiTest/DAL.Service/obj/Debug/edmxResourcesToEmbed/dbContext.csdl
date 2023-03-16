@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CryptoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Nome_Completo" />
+      <PropertyRef Name="CPF_CNPJ" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nome_Completo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CPF_CNPJ" Type="Int32" Nullable="false" />
+    <Property Name="Ultimo_Negoc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Ref" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Endereco" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Pais" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Nivel_KYC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Telefone" Type="Int32" />
+    <Property Name="RG" Type="Int32" />
+    <Property Name="Data_Nasc" Type="DateTime" Precision="3" />
+    <Property Name="PPE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Valor_Pret_Nego" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Cod_Parceiro" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Lim_Anual_BRL" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Controle">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Pedido" />
+      <PropertyRef Name="Id_Cliente" />
+      <PropertyRef Name="Cliente" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Pedido" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Cripto" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Operacao" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Data" Type="DateTime" Precision="3" />
+    <Property Name="Valor_RS" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Qtde_Cripto" Type="Int32" />
+    <Property Name="Taxa_RS" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Taxa_Cripto" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Hash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Banco" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Id_Cliente" Type="Int32" Nullable="false" />
+    <Property Name="Cliente" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Ref" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Statu_Operacao" Type="Boolean" />
+  </EntityType>
+  <EntityContainer Name="CryptoEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Cliente" EntityType="Self.Cliente" />
+    <EntitySet Name="Controle" EntityType="Self.Controle" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,17 @@
+C:\Users\Welber\source\repos\ApiTest\BLL.Services\obj\Debug\BLL.Services.csprojAssemblyReference.cache
+C:\Users\Welber\source\repos\ApiTest\BLL.Services\obj\Debug\BLL.Services.Properties.Resources.resources
+C:\Users\Welber\source\repos\ApiTest\BLL.Services\obj\Debug\BLL.Services.csproj.GenerateResource.cache
+C:\Users\Welber\source\repos\ApiTest\BLL.Services\obj\Debug\BLL.Services.csproj.CoreCompileInputs.cache
+C:\Users\Welber\source\repos\ApiTest\BLL.Services\bin\Debug\BLL.Services.dll.config
+C:\Users\Welber\source\repos\ApiTest\BLL.Services\bin\Debug\BLL.Services.dll
+C:\Users\Welber\source\repos\ApiTest\BLL.Services\bin\Debug\BLL.Services.pdb
+C:\Users\Welber\source\repos\ApiTest\BLL.Services\bin\Debug\DAL.Service.dll
+C:\Users\Welber\source\repos\ApiTest\BLL.Services\bin\Debug\EntityFramework.dll
+C:\Users\Welber\source\repos\ApiTest\BLL.Services\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Welber\source\repos\ApiTest\BLL.Services\bin\Debug\DAL.Service.pdb
+C:\Users\Welber\source\repos\ApiTest\BLL.Services\bin\Debug\DAL.Service.dll.config
+C:\Users\Welber\source\repos\ApiTest\BLL.Services\bin\Debug\EntityFramework.xml
+C:\Users\Welber\source\repos\ApiTest\BLL.Services\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Welber\source\repos\ApiTest\BLL.Services\obj\Debug\BLL.Services.csproj.CopyComplete
+C:\Users\Welber\source\repos\ApiTest\BLL.Services\obj\Debug\BLL.Services.dll
+C:\Users\Welber\source\repos\ApiTest\BLL.Services\obj\Debug\BLL.Services.pdb

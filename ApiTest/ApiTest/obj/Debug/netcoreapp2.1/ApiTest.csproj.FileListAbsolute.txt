@@ -1,0 +1,14 @@
+C:\Users\Welber\source\repos\ApiTest\ApiTest\bin\Debug\netcoreapp2.1\ApiTest.deps.json
+C:\Users\Welber\source\repos\ApiTest\ApiTest\bin\Debug\netcoreapp2.1\ApiTest.runtimeconfig.json
+C:\Users\Welber\source\repos\ApiTest\ApiTest\bin\Debug\netcoreapp2.1\ApiTest.runtimeconfig.dev.json
+C:\Users\Welber\source\repos\ApiTest\ApiTest\bin\Debug\netcoreapp2.1\ApiTest.dll
+C:\Users\Welber\source\repos\ApiTest\ApiTest\bin\Debug\netcoreapp2.1\ApiTest.pdb
+C:\Users\Welber\source\repos\ApiTest\ApiTest\obj\Debug\netcoreapp2.1\ApiTest.csprojAssemblyReference.cache
+C:\Users\Welber\source\repos\ApiTest\ApiTest\obj\Debug\netcoreapp2.1\ApiTest.csproj.CoreCompileInputs.cache
+C:\Users\Welber\source\repos\ApiTest\ApiTest\obj\Debug\netcoreapp2.1\ApiTest.RazorAssemblyInfo.cache
+C:\Users\Welber\source\repos\ApiTest\ApiTest\obj\Debug\netcoreapp2.1\ApiTest.RazorAssemblyInfo.cs
+C:\Users\Welber\source\repos\ApiTest\ApiTest\obj\Debug\netcoreapp2.1\ApiTest.AssemblyInfoInputs.cache
+C:\Users\Welber\source\repos\ApiTest\ApiTest\obj\Debug\netcoreapp2.1\ApiTest.AssemblyInfo.cs
+C:\Users\Welber\source\repos\ApiTest\ApiTest\obj\Debug\netcoreapp2.1\ApiTest.RazorTargetAssemblyInfo.cache
+C:\Users\Welber\source\repos\ApiTest\ApiTest\obj\Debug\netcoreapp2.1\ApiTest.dll
+C:\Users\Welber\source\repos\ApiTest\ApiTest\obj\Debug\netcoreapp2.1\ApiTest.pdb

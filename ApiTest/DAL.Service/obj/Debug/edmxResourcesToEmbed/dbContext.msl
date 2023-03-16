@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CryptoModelStoreContainer" CdmEntityContainer="CryptoEntities">
+    <EntitySetMapping Name="Cliente">
+      <EntityTypeMapping TypeName="CryptoModel.Cliente">
+        <MappingFragment StoreEntitySet="Cliente">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nome_Completo" ColumnName="Nome_Completo" />
+          <ScalarProperty Name="CPF_CNPJ" ColumnName="CPF_CNPJ" />
+          <ScalarProperty Name="Ultimo_Negoc" ColumnName="Ultimo_Negoc" />
+          <ScalarProperty Name="Ref" ColumnName="Ref" />
+          <ScalarProperty Name="Endereco" ColumnName="Endereco" />
+          <ScalarProperty Name="Pais" ColumnName="Pais" />
+          <ScalarProperty Name="Nivel_KYC" ColumnName="Nivel_KYC" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+          <ScalarProperty Name="RG" ColumnName="RG" />
+          <ScalarProperty Name="Data_Nasc" ColumnName="Data_Nasc" />
+          <ScalarProperty Name="PPE" ColumnName="PPE" />
+          <ScalarProperty Name="Valor_Pret_Nego" ColumnName="Valor_Pret_Nego" />
+          <ScalarProperty Name="Cod_Parceiro" ColumnName="Cod_Parceiro" />
+          <ScalarProperty Name="Lim_Anual_BRL" ColumnName="Lim_Anual_BRL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Controle">
+      <EntityTypeMapping TypeName="CryptoModel.Controle">
+        <MappingFragment StoreEntitySet="Controle">
+          <ScalarProperty Name="Statu_Operacao" ColumnName="Statu_Operacao" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Pedido" ColumnName="Pedido" />
+          <ScalarProperty Name="Cripto" ColumnName="Cripto" />
+          <ScalarProperty Name="Operacao" ColumnName="Operacao" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="Valor_RS" ColumnName="Valor_RS" />
+          <ScalarProperty Name="Qtde_Cripto" ColumnName="Qtde_Cripto" />
+          <ScalarProperty Name="Taxa_RS" ColumnName="Taxa_RS" />
+          <ScalarProperty Name="Taxa_Cripto" ColumnName="Taxa_Cripto" />
+          <ScalarProperty Name="Hash" ColumnName="Hash" />
+          <ScalarProperty Name="Banco" ColumnName="Banco" />
+          <ScalarProperty Name="Id_Cliente" ColumnName="Id_Cliente" />
+          <ScalarProperty Name="Cliente" ColumnName="Cliente" />
+          <ScalarProperty Name="Ref" ColumnName="Ref" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
